@@ -1,0 +1,117 @@
+<!-- Página para inserir empresa no sistema -->
+<div>
+    <header class="page-header">
+        <h1>Inserir Empresa</h1>
+    </header>
+    
+    <main class="content-page">
+        <form id="company-form" class="company-form">
+            <!-- Company Information -->
+            <div class="form-section">
+                <!-- Seção de informações de nomes da empresa -->
+                <h3 class="section-header">Dados da Empresa</h3>
+                <div class="form-grid">
+                    <!-- CNPJ -->
+                    <div class="form-group">
+                        <label for="NewCompanyCNPJ">CNPJ:</label>
+                        <input type="text" 
+                            id="NewCompanyCNPJ" 
+                            placeholder="00.000.000/0000-00"
+                            maxlength="15"
+                            required>
+                    </div>
+                    <!-- Razão Social -->
+                    <div class="form-group">
+                        <label for="NewCompanyCorporateName">Razão Social:</label>
+                        <input type="text" 
+                            id="NewCompanyCorporateName" 
+                            maxlength="40" 
+                            required>
+                    </div>
+                    <!-- Nome Fantasia -->
+                    <div class="form-group">
+                        <label for="NewCompanyTradeName">Nome Fantasia:</label>
+                        <input type="text" 
+                            id="NewCompanyTradeName"
+                            maxlength="40">
+                            
+                    </div>
+                </div>
+            <div class="form-section">
+                <!-- Seção de endereço da empresa -->
+                <h3 class="section-header">Endereço da Empresa</h3>
+                <div class="form-grid">
+                    <!-- CEP -->
+                    <div class="form-group">
+                        <label for="NewCompanyCEP">CEP:</label>
+                        <input type="text" 
+                            id="NewCompanyCEP" 
+                            placeholder="00000-000"
+                            maxlength="9">
+                        <button type="button" class="cep-btn">Buscar Endereço</button>
+                    </div>
+                    <!-- Logradouro/Nome -->
+                    <div class="form-group">
+                        <label for="NewCompanyStreetAddress">Logradouro:</label>
+                        <input type="text" 
+                            id="NewCompanyStreetAddress"
+                            maxlength="40" >
+                    </div>                   
+                    <!-- Bairro/Distrito -->
+                    <div class="form-group">
+                        <label for="NewCompanyNeighborhoodDistrict">Bairro/Distrito:</label>
+                        <input type="text" 
+                            id="NewCompanyNeighborhoodDistrict"
+                            maxlength="40" >
+                    </div>
+                    <!-- Localidade/UF -->
+                    <div class="form-group">
+                        <label for="NewCompanyState">UF:</label>
+                        <input type="text" 
+                            id="NewCompanyState"
+                            maxlength="2">
+                    </div>
+                    <!-- Complemento -->
+                    <div class="form-group">
+                        <label for="NewCompanyAddressComplement">Complemento:</label>
+                        <input type="text" 
+                            id="NewCompanyAddressComplement"
+                            maxlength="40" >
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <!-- Seção de contatos e responsável da empresa -->
+                <h3 class="section-header">Dados do Responsável</h3>
+                <div class="form-grid">
+                    <!-- Responsável -->
+                    <div class="form-group">
+                        <label for="NewCompanyResponsible">Responsável:</label>
+                        <input type="text" 
+                            id="NewCompanyResponsible"
+                            maxlength="40">
+                    </div>
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="NewCompanyEmail">E-mail:</label>
+                        <input type="email" 
+                            id="NewCompanyEmail"
+                            maxlength="40">
+                    </div>
+                    <!-- Telefone -->
+                    <div class="form-group">
+                        <label for="NewCompanyPhone">Telefone:</label>
+                        <input type="tel" 
+                            id="NewCompanyPhone"
+                            maxlength="15"
+                            placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+            </div>           
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Inserir Empresa</button>
+                <button type="reset" class="cancel-btn">Limpar</button>
+            </div>
+        </form>
+    </main>
+</div>

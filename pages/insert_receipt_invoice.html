@@ -1,0 +1,58 @@
+<!-- Página para inserir empresa no sistema -->
+<div>
+    <header class="page-header">
+        <h1>Inserir Fatura de Recebimento</h1>
+    </header>
+    
+    <main class="content-page">
+        <form id="receipt-invoice-form" class="receipt-invoice-form">
+            <!-- Company Information -->
+            <div class="form-section">
+                <!-- Seção de informações de nomes da empresa -->
+                <h3 class="section-header">Informações da Fatura de Recebimento</h3>
+                <div class="form-grid">
+                    <!-- Número da Fatura -->
+                    <div class="form-group">
+                        <label for="id-fatura">Número da Fatura:</label>
+                        <input type="text" 
+                            id="NewReceiptInvoice" 
+                            placeholder="Número"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- CNPJ -->
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" 
+                            id="NewReceiptInvoiceCNPJ" 
+                            placeholder="00.000.000/0000-00"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- Valor -->
+                    <div class="form-group">
+                        <label for="valor-fatura">Valor:</label>
+                        <input type="text" 
+                            id="newReceiptInvoiceValue" 
+                            placeholder="R$ 0,00"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- Data de Recebimento -->
+                    <div class="form-group">
+                        <label for="data-recebimento">Data de Recebimento:</label>
+                        <input type="date"
+                            id="newReceiptInvoiceReceiptDate" 
+                            placeholder="DD/MM/AAAA" 
+                            maxlength="40"
+                            required>
+                    </div>             
+                </div>
+            </div>        
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Inserir Fatura</button>
+                <button type="reset" class="cancel-btn">Limpar</button>
+            </div>
+        </form>
+    </main>
+</div>

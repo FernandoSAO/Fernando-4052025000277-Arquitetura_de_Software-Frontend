@@ -1,0 +1,55 @@
+
+<!-- Barra lateral com todas as páginas. Inicia fechado e abre/fecha quando clicar 
+em hamburguer-button do header -->
+<div class="left-sidebar">
+    <!-- botão para página inicial -->
+    <button class="nav-btn" data-page="inicial" data-route="/">
+        Início
+    </button>
+    
+    <!-- botão para páginas de buscao -->
+    <div class="sidebar-dropdown">
+        <button class="nav-btn dropdown-toggle" id="view-toggle">
+            <span>Busca</span>
+            <span class="dropdown-arrow">▸</span>
+        </button>
+        <!-- inicia fechado -->
+        <div class="dropdown-content">
+            <!-- botão para página de busca de faturas de pagamentos -->
+            <button class="dropdown-nav-btn" data-page="search-payment-invoices">
+                <span>Faturas de <br>Pagamento</span>
+            </button>
+            <!-- botão para busca de faturas de recebimentos -->
+            <button class="dropdown-nav-btn" data-page="search-receipt-invoices">
+                <span>Faturas de <br>Recebimento</span>
+            </button>
+            <!-- botão para página de busca de empresas -->
+            <button class="dropdown-nav-btn" data-page="search-companies">
+                <span>Empresas</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- botão para página de inserir faturas de pagamento/recebimento ou empresa -->
+    <div class="sidebar-dropdown">
+        <button class="nav-btn dropdown-toggle" id="insert-toggle">
+            <span>Inserir</span>
+            <span class="dropdown-arrow">▸</span>
+        </button>
+        <!-- inicia fechado -->
+        <div class="dropdown-content">
+            <!-- botão para página de inserir fatura de pagamento -->
+            <button class="dropdown-nav-btn" data-page="insert-payment-invoice">
+                <span>Fatura de <br>Pagamento</span>
+            </button>
+            <!-- botão para página de inserir fatura de recebimento -->
+            <button class="dropdown-nav-btn" data-page="insert-receipt-invoice">
+                <span>Fatura de <br>Recebimento</span>
+            </button>
+            <!-- botão para página de inserir empresa -->
+            <button class="dropdown-nav-btn" data-page="insert-company">
+                <span>Empresa</span>
+            </button>
+        </div>
+    </div>
+</div>

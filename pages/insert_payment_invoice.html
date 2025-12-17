@@ -1,0 +1,58 @@
+<!-- Página para inserir empresa no sistema -->
+<div>
+    <header class="page-header">
+        <h1>Inserir Fatura de Pagamento</h1>
+    </header>
+    
+    <main class="content-page">
+        <form id="payment-invoice-form" class="payment-invoice-form">
+            <!-- Company Information -->
+            <div class="form-section">
+                <!-- Seção de informações de nomes da empresa -->
+                <h3 class="section-header">Informações da Fatura de Pagamento</h3>
+                <div class="form-grid">
+                    <!-- Número da Fatura -->
+                    <div class="form-group">
+                        <label for="id-fatura">Número da Fatura:</label>
+                        <input type="text" 
+                            id="NewPaymentInvoice" 
+                            placeholder="Número"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- CNPJ -->
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" 
+                            id="NewPaymentInvoiceCNPJ" 
+                            placeholder="00.000.000/0000-00"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- Valor -->
+                    <div class="form-group">
+                        <label for="valor-fatura">Valor:</label>
+                        <input type="text" 
+                            id="newPaymentInvoiceValue" 
+                            placeholder="R$ 0,00"
+                            maxlength="40"
+                            required>
+                    </div>
+                    <!-- Data de Pagamento -->
+                    <div class="form-group">
+                        <label for="data-pagamento">Data de Pagamento:</label>
+                        <input type="date"
+                            id="newPaymentInvoicePaymentDate" 
+                            placeholder="DD/MM/AAAA" 
+                            maxlength="40"
+                            required>
+                    </div>             
+                </div>
+            </div>        
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Inserir Fatura</button>
+                <button type="reset" class="cancel-btn">Limpar</button>
+            </div>
+        </form>
+    </main>
+</div>

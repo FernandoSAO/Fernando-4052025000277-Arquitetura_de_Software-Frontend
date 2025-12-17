@@ -1,0 +1,58 @@
+Pagamento<!-- Página para ver próximos pagamentos -->
+<div>
+    <header class="page-header">
+        <h1>Busca de Empresas</h1>
+    </header>
+    
+    <main class="content-page">
+        <form id="search-companies-form" class="search-companies-form">
+            <!-- Sistema de busca -->
+            <div class="form-search-section">
+                <div class="form-search-grid">
+                    <!-- CNPJ -->
+                    <div class="form-group">
+                        <label for="SearchCompanyCNPJ">CNPJ:</label>
+                        <input type="text" 
+                            id="SearchCompanyCNPJ" 
+                            placeholder="00.000.000/0000-00">
+                    </div>
+                    <!-- Nome Fantasia -->
+                    <div class="form-group">
+                        <label for="SearchCompanyTradeName">Nome Fantasia:</label>
+                        <input type="text" 
+                            id="SearchCompanyTradeName" 
+                            placeholder="Nome Fantasia">
+                    </div>
+                    <!-- Razão Social -->
+                    <div class="form-group">
+                        <label for="SearchCompanyCorporateName">Razão Social:</label>
+                        <input type="text" 
+                            id="SearchCompanyCorporateName" 
+                            placeholder="Razão Social">
+                    </div>       
+                </div>
+            </div>        
+            <div class="form-search-actions">
+                <button type="submit" class="submit-search-btn">Buscar</button>
+                <button type="reset" class="cancel-search-btn">Limpar</button>
+            </div>
+        </form>
+        <table id="data-table" class="data-table">
+        <!-- Cabeçalho da Tabela -->
+        <thead>
+            <tr>
+                <th>CNPJ</th>
+                <th>Nome Fantasia</th>
+                <th>Razão Social</th>
+                <th>Nº Faturas Pagamento Abertas</th>
+                <th>Nº Faturas Recebimento Abertas</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <!-- Dados das faturas -->
+        <tbody id="company-table-body">
+            <!-- A ser preenchido -->
+        </tbody>
+    </table>
+    </main>
+</div>

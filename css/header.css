@@ -1,0 +1,44 @@
+/* ===== cabeçalho ===== */
+
+/* cabeçalho */
+.main-header {
+    background: var(--header-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    z-index: 10;
+}
+
+/* botão hamburguer */
+.hamburguer-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.hamburguer-button:hover {
+    background: var(--header-button-hover);
+}
+
+.hamburguer-line {
+    width: 18px;
+    height: 2px;
+    background-color:var(--letters_main-color);
+    border-radius: 1px;
+}
+
+/* logo da empresa */
+.app-name {
+    color:var(--letters_main-color);
+    font-size: 20px;
+    font-weight: bold;
+}

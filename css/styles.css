@@ -1,0 +1,65 @@
+
+/* css geral */
+
+/* variáveis */
+:root {  
+    /* variáveis gerais */ 
+    --background-color: #000000;
+    --letters_main-color: #5d5988;
+    --secondary-background-color :rgb(10, 10, 10);
+
+    /* header variables */
+    --header-color: #161616;
+    --header-button-hover:#242424;
+
+    /* sidebar variables */
+    --left-sidebar-color: #191919;
+    --left-sidebar-button-hover: #242424;
+
+    /* form */
+    --odd_line-color:#9b9696;
+    --even_line-color:#5d5656;
+
+    /* tabelas */
+    --odd_line-color:#9b9696;
+    --even_line-color:#5d5656;
+}
+
+body,
+ul,
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+/* conteúdo total */
+#app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* área principal */
+#main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* content */
+#app-content {
+    background-color: var(--background-color);
+    justify-content: center;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Quando sidebar está aberta, evita scroll no body */
+body.sidebar-open {
+    overflow: hidden;
+}

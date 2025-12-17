@@ -1,0 +1,123 @@
+
+/* css para search_payment_invoice */
+
+.search-invoice-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.form-search-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-search-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.submit-search-btn, .cancel-search-btn {
+    padding: 6px 50px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    color: var(--letters_main-color);
+}
+
+.submit-btn:hover, .cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.data-table thead tr {
+    background-color: var(--header-color);
+    text-align: center;
+    font-weight: bold;
+    height: 50px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--letters_main-color);
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: var(--secondary-background-color);
+}
+
+.data-table tbody tr:nth-of-type(even) {
+    background-color: #0c0b0b;
+}
+
+.data-table tbody tr:last-of-type {
+    border-bottom: 2px solid #ffffff;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* botões de ação */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.paid-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.paid-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.paid-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}
+
+.action-column {
+    display: flex;         
+    gap: 4px;             
+}
+
+.action-column button {
+    flex: 1;               
+    width: 50%;        
+    padding: 8px;         
+    box-sizing: border-box; 
+}

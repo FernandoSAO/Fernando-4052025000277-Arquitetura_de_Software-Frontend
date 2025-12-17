@@ -1,0 +1,64 @@
+<!-- Página para ver próximos pagamentos -->
+<div>
+    <header class="page-header">
+        <h1>Busca de Faturas de Recebimento</h1>
+    </header>
+    
+    <main class="content-page">
+        <form id="search-receipt-invoices-form" class="search-receipt-invoices-form">
+            <!-- Sistema de busca -->
+            <div class="form-search-section">
+                <div class="form-search-grid">
+                    <!-- Número da Fatura -->
+                    <div class="form-group">
+                        <label for="SearchReceiptInvoice">Número da Fatura:</label>
+                        <input type="text" 
+                            id="SearchReceiptInvoice" 
+                            placeholder="Número">
+                    </div>
+                    <!-- CNPJ -->
+                    <div class="form-group">
+                        <label for="SearchReceiptInvoiceCNPJ">CNPJ:</label>
+                        <input type="text" 
+                            id="SearchReceiptInvoiceCNPJ" 
+                            placeholder="00.000.000/0000-00">
+                    </div>
+                    <!-- Status -->
+                    <div class="form-group">
+                        <label for="SearchReceiptInvoiceStatus">Status:</label>
+                        <select id="SearchReceiptInvoiceStatus" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="fechada">fechada</option>
+                            <option value="aberta" selected>aberta</option>
+                            <option value="atrasada">atrasada</option>
+                            <option value="todas">todas</option>
+                        </select>
+                    </div>
+                    <p>Preencher apenas CNPJ para procurar todas as faturas de um empresa</p>
+                    <!-- Data de Pagamento -->            
+                </div>
+            </div>        
+            <div class="form-search-actions">
+                <button type="submit" class="submit-search-btn">Buscar</button>
+                <button type="reset" class="cancel-search-btn">Limpar</button>
+            </div>
+        </form>
+        <table id="data-table" class="data-table">
+        <!-- Cabeçalho da Tabela -->
+        <thead>
+            <tr>
+                <th>Número da Fatura</th>
+                <th>CNPJ</th>
+                <th>Valor</th>
+                <th>Data de Pagamento</th>
+                <th>Satus</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <!-- Dados das faturas -->
+        <tbody id="receipt-table-body">
+            <!-- A ser preenchido -->
+        </tbody>
+    </table>
+    </main>
+</div>
