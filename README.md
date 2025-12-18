@@ -1,16 +1,16 @@
-## Executando o projeto localmente
+Meu Front
+Este pequeno projeto faz parte do material extra da Disciplina Desenvolvimento Back End Avançado
 
-Este projeto é um site estático utilizando HTML, CSS e JavaScript puro.
-O ponto de entrada da aplicação é o arquivo `index.html`.
+Como executar em modo de desenvolvimento
+Basta fazer o download do projeto e abrir o arquivo index.html no seu browser.
 
-### Requisitos
-- Navegador moderno
-- (Opcional) Python 3
+Como executar através do Docker
+Certifique-se de ter o Docker instalado e em execução em sua máquina.
 
-### Passos
-1. Clone o repositório
-2. Entre na pasta do projeto
-3. Execute um servidor HTTP simples:
+Navegue até o diretório que contém o Dockerfile no terminal e seus arquivos de aplicação e Execute como administrador o seguinte comando para construir a imagem Docker:
 
-```bash
-python -m http.server 5500
+$ docker build -t nome_da_sua_imagem .
+Uma vez criada a imagem, para executar o container basta executar, como administrador, seguinte o comando:
+
+$ docker run -d -p 8080:80 nome_da_sua_imagem
+Uma vez executando, para acessar o front-end, basta abrir o http://localhost:8080/#/ no navegador.
