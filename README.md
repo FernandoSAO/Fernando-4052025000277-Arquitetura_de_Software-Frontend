@@ -30,3 +30,5 @@ Uma vez criada a imagem, para executar o container basta executar, como administ
 
 $ docker run -d -p 8080:80 nome_da_sua_imagem
 Uma vez executando, para acessar o front-end, basta abrir o http://localhost:8080/#/ no navegador.
+
+![teste](/fluxogramas/images.png)
