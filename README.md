@@ -1,11 +1,27 @@
-Meu Front
-Este pequeno projeto faz parte do material extra da Disciplina Desenvolvimento Back End Avançado
+# Front-end
 
-Como executar em modo de desenvolvimento
-Basta fazer o download do projeto e abrir o arquivo index.html no seu browser.
+Esta front tem como objetivo a gestão de faturas de recebimento e pagamento.
 
-Como executar através do Docker
-Certifique-se de ter o Docker instalado e em execução em sua máquina.
+Tem como funcionalidade das páginas:
+
+    - inclusão de faturas de pagamento (utilizando a API: http://localhost:5000/addPaymentInvoice  método: post);
+    - inclusão de faturas de recebimento (utilizando a API: http://localhost:5000/addReceiptInvoice  método: post);
+    - inclusão de empresas (utilizando a API: http://localhost:5000/addCompany  método: post);
+    - busca de logradouro, bairro e UF a partir do CEP, utilizando a API dos Correios (ViaCEP) (utilizando a API: http://localhost:5000/getCEPInformation  método: get);
+    - busca por faturas de pagamento a partir de um sistema de filtros (utilizando a API: http://localhost:5000/getPaymentInvoicesByFilters  método: get);
+    - busca por faturas de recebimento a partir de um sistema de filtros (utilizando a API: http://localhost:5000/getReceiptInvoicesByFilters  método: get);
+    - busca por empresas a partir de um sistema de filtros (utilizando a API: http://localhost:5000/getCompaniesByFilters  método: get);
+    - alteração do estado de faturas de pagamento (aberto -> fechado) (utilizando a API: http://localhost:5000/markPaymentInvoicePaid  método: patch);
+    - alteração do estado de faturas de recebimento (aberto -> fechado) (utilizando a API: http://localhost:5000/markReceiptInvoicePaid  método: patch);
+    - exclusão de faturas de pagamento (utilizando a API: http://localhost:5000/deletePaymentInvoice  método: delete);
+    - exclusão de faturas de recebimento (utilizando a API: http://localhost:5000/deleteReceiptInvoice  método: delete);
+    - exclusão de empresas (utilizando a API: http://localhost:5000/deleteCompany  método: delete);
+
+---
+
+## Como executar 
+
+Certifique-se de ter o [Docker](https://docs.docker.com/engine/install/) instalado e em execução em sua máquina.
 
 Navegue até o diretório que contém o Dockerfile no terminal e seus arquivos de aplicação e Execute como administrador o seguinte comando para construir a imagem Docker:
 
