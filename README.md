@@ -17,6 +17,10 @@ Tem como funcionalidade das páginas:
     - exclusão de faturas de recebimento (utilizando a API: http://localhost:5000/deleteReceiptInvoice  método: delete);
     - exclusão de empresas (utilizando a API: http://localhost:5000/deleteCompany  método: delete);
 
+Fluxograma do sistema:
+
+![fluxograma](/fluxogramas/arquitetura_aplicação.png)
+
 ---
 
 ## Como executar 
@@ -30,5 +34,3 @@ Uma vez criada a imagem, para executar o container basta executar, como administ
 
 $ docker run -d -p 8080:80 nome_da_sua_imagem
 Uma vez executando, para acessar o front-end, basta abrir o http://localhost:8080/#/ no navegador.
-
-![teste](/fluxogramas/images.png)
