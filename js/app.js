@@ -46,13 +46,13 @@ async function initApp() {
         loadComponent('sidebar')
     ]);
     
-    // Insert components into DOM
+    // Insere componente no DOM
     document.getElementById('header-container').innerHTML = headerHTML;
     document.getElementById('sidebar-container').innerHTML = sidebarHTML;
     
     console.log('✅ Components loaded');
     
-    // DEBUG: Check dropdown elements
+    // DEBUG: Verifica os elementos do dropdown
     setTimeout(() => {
         console.log('🔍 Dropdown toggles found:', 
             document.querySelectorAll('.dropdown-toggle').length);
@@ -88,7 +88,7 @@ function setupHamburgerToggle() {
 function setupSidebarNavigation() {
     console.log('🔗 Setting up ALL sidebar interactions...');
     
-    // A. Setup dropdown toggles (buttons with .dropdown-toggle class)
+    // A. Faz o setup dos toggles do dropdown (botões com classe .dropdown-toggle)
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     console.log(`📂 Found ${dropdownToggles.length} dropdown toggles`);
     
@@ -98,7 +98,7 @@ function setupSidebarNavigation() {
             
             console.log('📂 Dropdown toggle clicked:', this.textContent.trim());
             
-            // Find and toggle the dropdown container
+            // procura e aciona o container do dropdown
             const dropdown = this.closest('.sidebar-dropdown');
             if (dropdown) {
                 dropdown.classList.toggle('expanded');
@@ -107,24 +107,24 @@ function setupSidebarNavigation() {
         });
     });
     
-    // B. Setup page navigation (buttons with data-page attribute)
+    // B. Aciona a navegação da página (botões com atributo data-page)
     const navButtons = document.querySelectorAll('[data-page]');
     console.log(`📄 Found ${navButtons.length} navigation buttons`);
     
     navButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Don't trigger parent clicks
+            e.stopPropagation();
             
             const page = this.dataset.page;
             console.log(`📄 Navigating to: ${page}`);
             
-            // Load the page
+            // Carrega a página
             loadPage(page);
             
-            // Update active navigation item
+            // Faz update nos itens de navegação
             updateActiveNavItem(page);
 
-            // FECHA A SIDEBAR AO NAVEGAR
+            // Fecha o sidebar ao navegar
             const sidebar = document.querySelector('.left-sidebar');
             if (sidebar?.classList.contains('active')) {
                 sidebar.classList.remove('active');
@@ -141,7 +141,7 @@ async function loadPage(pageName) {
     
     const content = document.getElementById('app-content');
     
-    // Show loading indicator
+    // Mostra o indicador de loading
     content.innerHTML = '<div class="loading">⌛ Carregando...</div>';
     
     try {
@@ -180,14 +180,14 @@ async function loadPage(pageName) {
     }
 }
 
-// Update active navigation item
+// Faz Update nos itens de navegação ativos
 function updateActiveNavItem(activePage) {
-    // Remove active from all buttons
+    // Remove active de todos os botões
     document.querySelectorAll('.nav-btn, .dropdown-nav-btn').forEach(item => {
         item.classList.remove('active');
     });
     
-    // Add active to matching buttons
+    // Adiciona ativo
     document.querySelectorAll('[data-page]').forEach(item => {
         if (item.dataset.page === activePage) {
             item.classList.add('active');
@@ -209,5 +209,5 @@ function initializePage(pageName) {
     }
 }
 
-// Start app when DOM is ready
+// Inicia o app quando o DOM esta pronto
 document.addEventListener('DOMContentLoaded', initApp);
